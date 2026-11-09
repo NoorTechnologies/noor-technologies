@@ -1,17 +1,45 @@
 
 export default function Loader() {
   return (
-    <div className="fixed inset-0 z-[100] flex items-center justify-center bg-white">
-      <div className="relative flex h-28 w-28 items-center justify-center">
-        {/* Loading ring */}
-        <div className="absolute inset-0 animate-spin rounded-full border-[3px] border-[#E2E8F0] border-t-[#0F766E] border-r-[#F97316]" />
+    <div
+      role="status"
+      aria-label="Loading NOOR TECHNOLOGIES"
+      className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-[#F8FAFC]"
+    >
+      {/* Animated logo */}
+      <div className="relative flex h-32 w-32 items-center justify-center">
 
-        {/* Company logo */}
+        {/* Outer rotating ring */}
+        <div className="absolute inset-0 animate-spin rounded-full bg-[conic-gradient(from_0deg,transparent_0deg,#0F766E_120deg,#F97316_220deg,transparent_320deg)]" />
+
+        {/* Inner white circle */}
+        <div className="absolute inset-[4px] rounded-full bg-white" />
+
+        {/* Logo */}
         <img
           src="/logo.png"
           alt="NOOR TECHNOLOGIES"
-          className="h-16 w-16 object-contain"
+          width="76"
+          height="76"
+          fetchPriority="high"
+          className="relative z-10 h-[76px] w-[76px] object-contain"
         />
+      </div>
+
+      {/* Brand name */}
+      <h2 className="mt-7 text-base font-bold tracking-[0.16em] text-[#172033]">
+        NOOR <span className="text-[#0F766E]">TECHNOLOGIES</span>
+      </h2>
+
+      <p className="mt-2 text-[10px] tracking-[0.2em] text-[#64748B]">
+        DIGITAL SOLUTIONS
+      </p>
+
+      {/* Loading dots */}
+      <div className="mt-7 flex items-center gap-2">
+        <span className="h-2 w-2 animate-bounce rounded-full bg-[#0F766E]" />
+        <span className="h-2 w-2 animate-bounce rounded-full bg-[#F97316] [animation-delay:150ms]" />
+        <span className="h-2 w-2 animate-bounce rounded-full bg-[#0F766E] [animation-delay:300ms]" />
       </div>
     </div>
   );
