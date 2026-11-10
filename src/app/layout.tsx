@@ -41,15 +41,24 @@ export const metadata: Metadata = {
       "Digital Solutions. Software. Technology Education.",
     url: "https://noor-technologies-phi.vercel.app/",
     siteName: "NOOR TECHNOLOGIES",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "NOOR TECHNOLOGIES - Digital Solutions, Software and Technology Education",
+      },
+    ],
     locale: "en_IN",
     type: "website",
   },
 
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: "NOOR TECHNOLOGIES",
     description:
       "Digital Solutions. Software. Technology Education.",
+    images: ["/og-image.png"],
   },
 
   robots: {
