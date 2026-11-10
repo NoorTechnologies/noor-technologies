@@ -15,26 +15,50 @@ const orbitron = Orbitron({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.noortechnologies.in"),
+  metadataBase: new URL("https://noor-technologies-phi.vercel.app"),
+
   title: {
     default: "NOOR TECHNOLOGIES | Digital Solutions & Software",
     template: "%s | NOOR TECHNOLOGIES",
   },
+
   description:
     "NOOR TECHNOLOGIES provides website development, custom software, UI/UX design, IT consulting and technology training.",
+
+  icons: {
+    icon: "/logo.png",
+    shortcut: "/logo.png",
+    apple: "/logo.png",
+  },
+
   alternates: {
     canonical: "/",
   },
+
   openGraph: {
-    title: "NOOR TECHNOLOGIES",
-    description: "Digital Solutions. Software. Technology Education.",
-    url: "https://www.noortechnologies.in",
+    title: "NOOR TECHNOLOGIES | Digital Solutions & Software",
+    description:
+      "Digital Solutions. Software. Technology Education.",
+    url: "https://noor-technologies-phi.vercel.app/",
     siteName: "NOOR TECHNOLOGIES",
+    locale: "en_IN",
     type: "website",
   },
+
+  twitter: {
+    card: "summary",
+    title: "NOOR TECHNOLOGIES",
+    description:
+      "Digital Solutions. Software. Technology Education.",
+  },
+
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
   },
 };
 
